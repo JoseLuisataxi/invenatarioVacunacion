@@ -25,3 +25,18 @@ Información adicional:
 	
 
 
+Arquitectura:
+	- servidor-oauth: Servidor de autenticación
+	- servidor-eureka: Servidor de autenticación (puerto 8761)
+	- servidor-zuul: Punto de entrada y balanceador (puerto 8443)
+	- servicios
+		- servicio-empleado (puertos dinámicos)
+		- Servicio-administrador (puertos dinámicos)
+		
+BDD
+	- Postgres (puerto 5433)
+	- Java 11
+	- Spring boot 
+
+		
+		
