@@ -1,71 +1,310 @@
-2022-10-06 23:25:24.160  INFO 23228 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
-2022-10-06 23:25:24.344  INFO 23228 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
-2022-10-06 23:25:24.345  WARN 23228 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/servidor-zuul/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
-2022-10-06 23:25:24.347  INFO 23228 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : No active profile set, falling back to default profiles: default
-2022-10-06 23:25:25.441  WARN 23228 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2022-10-06 23:25:25.462  WARN 23228 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
-2022-10-06 23:25:25.670  INFO 23228 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c735fcef-866f-3644-977c-f698a1952416
-2022-10-06 23:25:26.561  INFO 23228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (http)
-2022-10-06 23:25:26.576  INFO 23228 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-10-06 23:25:26.576  INFO 23228 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
-2022-10-06 23:25:26.728  INFO 23228 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-10-06 23:25:26.728  INFO 23228 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2359 ms
-2022-10-06 23:25:26.845  WARN 23228 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-10-06 23:25:26.846  INFO 23228 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-10-06 23:25:26.866  INFO 23228 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1ac99be
-2022-10-06 23:25:27.631  WARN 23228 --- [restartedMain] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
-2022-10-06 23:25:27.676  WARN 23228 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2022-10-06 23:25:27.676  INFO 23228 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2022-10-06 23:25:28.007  INFO 23228 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-10-06 23:25:28.777  INFO 23228 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
-2022-10-06 23:25:28.989  INFO 23228 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+2022-10-07 00:07:47.891  INFO 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-10-07 00:07:48.058  INFO 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-10-07 00:07:48.058  WARN 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/servidor-zuul/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-10-07 00:07:48.061  INFO 15036 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : No active profile set, falling back to default profiles: default
+2022-10-07 00:07:49.298  WARN 15036 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2022-10-07 00:07:49.323  WARN 15036 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2022-10-07 00:07:49.551  INFO 15036 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c735fcef-866f-3644-977c-f698a1952416
+2022-10-07 00:07:50.510  INFO 15036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (http)
+2022-10-07 00:07:50.532  INFO 15036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-07 00:07:50.532  INFO 15036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-10-07 00:07:50.693  INFO 15036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-07 00:07:50.693  INFO 15036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2604 ms
+2022-10-07 00:07:50.820  WARN 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-10-07 00:07:50.820  INFO 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-07 00:07:50.838  INFO 15036 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@fb75ba
+2022-10-07 00:07:51.660  WARN 15036 --- [restartedMain] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2022-10-07 00:07:51.708  WARN 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-10-07 00:07:51.708  INFO 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-07 00:07:52.057  INFO 15036 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-07 00:07:52.861  INFO 15036 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-10-07 00:07:53.073  INFO 15036 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 2e4c28f1-728e-4721-993c-9fb1ae8c37b0
+Using generated security password: 5adb08b6-9fee-40b0-94f2-f27690ff4d90
 
-2022-10-06 23:25:29.336  INFO 23228 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d0b10, org.springframework.security.web.context.SecurityContextPersistenceFilter@166513e, org.springframework.security.web.header.HeaderWriterFilter@e39f7b, org.springframework.security.web.authentication.logout.LogoutFilter@a94e1f, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@b7041c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cd825, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71769a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73604c, org.springframework.security.web.session.SessionManagementFilter@391bb6, org.springframework.security.web.access.ExceptionTranslationFilter@1b33960, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10a4e34]
-2022-10-06 23:25:29.383  WARN 23228 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-10-06 23:25:29.414  WARN 23228 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2022-10-06 23:25:29.673  INFO 23228 --- [restartedMain] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
-2022-10-06 23:25:29.681  WARN 23228 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
-2022-10-06 23:25:29.687  INFO 23228 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2022-10-06 23:25:29.776  INFO 23228 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-10-06 23:25:29.822  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-10-06 23:25:29.876  INFO 23228 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2022-10-06 23:25:29.877  INFO 23228 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2022-10-06 23:25:30.107  INFO 23228 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2022-10-06 23:25:30.107  INFO 23228 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2022-10-06 23:25:30.375  INFO 23228 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-10-06 23:25:30.629  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2022-10-06 23:25:30.630  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2022-10-06 23:25:30.630  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2022-10-06 23:25:30.630  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2022-10-06 23:25:30.630  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2022-10-06 23:25:30.630  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2022-10-06 23:25:30.630  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2022-10-06 23:25:30.762  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2022-10-06 23:25:30.765  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2022-10-06 23:25:30.768  INFO 23228 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-10-06 23:25:30.772  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1665116730771 with initial instances count: 3
-2022-10-06 23:25:30.776  INFO 23228 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVIDOR-ZUUL with eureka with status UP
-2022-10-06 23:25:30.777  INFO 23228 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1665116730777, current=UP, previous=STARTING]
-2022-10-06 23:25:30.779  INFO 23228 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:7e2a6d435113c141fb01f3567b5193a0: registering service...
-2022-10-06 23:25:30.823  INFO 23228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (http) with context path ''
-2022-10-06 23:25:30.823  INFO 23228 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:7e2a6d435113c141fb01f3567b5193a0 - registration status: 204
-2022-10-06 23:25:30.824  INFO 23228 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8443
-2022-10-06 23:25:31.195  INFO 23228 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : Started ServidorZuulApplication in 8.973 seconds (JVM running for 10.322)
-2022-10-06 23:27:03.626  INFO 23228 --- [http-nio-8443-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-10-06 23:27:03.626  INFO 23228 --- [http-nio-8443-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-10-06 23:27:03.639  INFO 23228 --- [http-nio-8443-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2022-10-06 23:27:03.978  INFO 23228 --- [http-nio-8443-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: servidor-oauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-10-06 23:27:04.014  INFO 23228 --- [http-nio-8443-exec-3] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-servidor-oauth
-2022-10-06 23:27:04.015  INFO 23228 --- [http-nio-8443-exec-3] c.netflix.loadbalancer.BaseLoadBalancer  : Client: servidor-oauth instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=servidor-oauth,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2022-10-06 23:27:04.028  INFO 23228 --- [http-nio-8443-exec-3] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
-2022-10-06 23:27:04.065  INFO 23228 --- [http-nio-8443-exec-3] c.netflix.config.ChainedDynamicProperty  : Flipping property: servidor-oauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-10-06 23:27:04.067  INFO 23228 --- [http-nio-8443-exec-3] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client servidor-oauth initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=servidor-oauth,current list of Servers=[192.168.56.1:34624],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:192.168.56.1:34624;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Wed Dec 31 19:00:00 COT 1969;	First connection made: Wed Dec 31 19:00:00 COT 1969;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@18a5d2a
-2022-10-06 23:27:05.036  INFO 23228 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: servidor-oauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2022-10-06 23:30:30.641  INFO 23228 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-10-06 23:35:30.649  INFO 23228 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-10-06 23:40:30.657  INFO 23228 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-10-06 23:45:30.671  INFO 23228 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:07:53.475  INFO 15036 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b5bdb0, org.springframework.security.web.context.SecurityContextPersistenceFilter@8a1fe8, org.springframework.security.web.header.HeaderWriterFilter@3abb7f, org.springframework.security.web.authentication.logout.LogoutFilter@1e8411d, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1559472, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13edc29, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f9c921, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18619da, org.springframework.security.web.session.SessionManagementFilter@14335a6, org.springframework.security.web.access.ExceptionTranslationFilter@1a5b491, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6981ea]
+2022-10-07 00:07:53.529  WARN 15036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-07 00:07:53.561  WARN 15036 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-10-07 00:07:53.874  INFO 15036 --- [restartedMain] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2022-10-07 00:07:53.883  WARN 15036 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-10-07 00:07:53.898  INFO 15036 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-10-07 00:07:54.031  INFO 15036 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-10-07 00:07:54.077  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-10-07 00:07:54.142  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-10-07 00:07:54.143  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-10-07 00:07:54.382  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-10-07 00:07:54.382  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-10-07 00:07:54.659  INFO 15036 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:07:54.911  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-10-07 00:07:54.911  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-10-07 00:07:54.911  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-10-07 00:07:54.912  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-10-07 00:07:54.912  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-10-07 00:07:54.912  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-10-07 00:07:54.912  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-10-07 00:07:55.054  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-10-07 00:07:55.057  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-10-07 00:07:55.060  INFO 15036 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-10-07 00:07:55.065  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1665119275064 with initial instances count: 3
+2022-10-07 00:07:55.070  INFO 15036 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVIDOR-ZUUL with eureka with status UP
+2022-10-07 00:07:55.071  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1665119275071, current=UP, previous=STARTING]
+2022-10-07 00:07:55.073  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:f86adfe55d3cfb7e69ae1f0605237004: registering service...
+2022-10-07 00:07:55.118  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:f86adfe55d3cfb7e69ae1f0605237004 - registration status: 204
+2022-10-07 00:07:55.118  INFO 15036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (http) with context path ''
+2022-10-07 00:07:55.119  INFO 15036 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8443
+2022-10-07 00:07:55.489  INFO 15036 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : Started ServidorZuulApplication in 9.569 seconds (JVM running for 11.111)
+2022-10-07 00:08:08.322  INFO 15036 --- [http-nio-8443-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-07 00:08:08.323  INFO 15036 --- [http-nio-8443-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-07 00:08:08.333  INFO 15036 --- [http-nio-8443-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2022-10-07 00:08:08.607  INFO 15036 --- [http-nio-8443-exec-2] c.netflix.config.ChainedDynamicProperty  : Flipping property: servidor-oauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-10-07 00:08:08.658  INFO 15036 --- [http-nio-8443-exec-2] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-servidor-oauth
+2022-10-07 00:08:08.658  INFO 15036 --- [http-nio-8443-exec-2] c.netflix.loadbalancer.BaseLoadBalancer  : Client: servidor-oauth instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=servidor-oauth,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-10-07 00:08:08.666  INFO 15036 --- [http-nio-8443-exec-2] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-10-07 00:08:08.699  INFO 15036 --- [http-nio-8443-exec-2] c.netflix.config.ChainedDynamicProperty  : Flipping property: servidor-oauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-10-07 00:08:08.700  INFO 15036 --- [http-nio-8443-exec-2] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client servidor-oauth initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=servidor-oauth,current list of Servers=[192.168.56.1:36373],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.56.1:36373;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Wed Dec 31 19:00:00 COT 1969;	First connection made: Wed Dec 31 19:00:00 COT 1969;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@d6c45e
+2022-10-07 00:08:09.677  INFO 15036 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: servidor-oauth.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-10-07 00:08:09.989  WARN 15036 --- [http-nio-8443-exec-2] o.s.c.n.z.filters.post.SendErrorFilter   : Error during filtering
+
+com.netflix.zuul.exception.ZuulException: 
+	at org.springframework.cloud.netflix.zuul.filters.post.SendErrorFilter.findZuulException(SendErrorFilter.java:118) ~[spring-cloud-netflix-zuul-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.cloud.netflix.zuul.filters.post.SendErrorFilter.run(SendErrorFilter.java:78) ~[spring-cloud-netflix-zuul-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at com.netflix.zuul.ZuulFilter.runFilter(ZuulFilter.java:117) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.processZuulFilter(FilterProcessor.java:193) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.runFilters(FilterProcessor.java:157) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.FilterProcessor.error(FilterProcessor.java:105) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.ZuulRunner.error(ZuulRunner.java:112) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.error(ZuulServlet.java:145) ~[zuul-core-1.3.1.jar:1.3.1]
+	at com.netflix.zuul.http.ZuulServlet.service(ZuulServlet.java:83) ~[zuul-core-1.3.1.jar:1.3.1]
+	at org.springframework.web.servlet.mvc.ServletWrappingController.handleRequestInternal(ServletWrappingController.java:166) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.cloud.netflix.zuul.web.ZuulController.handleRequest(ZuulController.java:45) ~[spring-cloud-netflix-zuul-2.2.5.RELEASE.jar:2.2.5.RELEASE]
+	at org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter.handle(SimpleControllerHandlerAdapter.java:52) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.37.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:176) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.3.4.RELEASE.jar:5.3.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93) ~[spring-boot-actuator-2.3.3.RELEASE.jar:2.3.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1589) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.37.jar:9.0.37]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2022-10-07 00:12:54.917  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:17:54.922  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:22:54.926  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:27:54.938  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:32:54.952  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:37:54.969  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:42:54.971  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:47:54.989  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:50:06.307  INFO 15036 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVIDOR-ZUUL with eureka with status DOWN
+2022-10-07 00:50:06.307  WARN 15036 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1665121806307, current=DOWN, previous=UP]
+2022-10-07 00:50:06.308  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:f86adfe55d3cfb7e69ae1f0605237004: registering service...
+2022-10-07 00:50:06.313  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:f86adfe55d3cfb7e69ae1f0605237004 - registration status: 204
+2022-10-07 00:50:06.612  INFO 15036 --- [Thread-1] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2022-10-07 00:50:06.615  INFO 15036 --- [Thread-1] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-servidor-oauth
+2022-10-07 00:50:06.627  INFO 15036 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-07 00:50:06.651  INFO 15036 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-10-07 00:50:09.660  INFO 15036 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-10-07 00:50:09.675  INFO 15036 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:f86adfe55d3cfb7e69ae1f0605237004 - deregister  status: 200
+2022-10-07 00:50:09.720  INFO 15036 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-10-07 00:50:10.582  INFO 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-10-07 00:50:10.588  INFO 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-10-07 00:50:10.588  WARN 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/servidor-zuul/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-10-07 00:50:10.589  INFO 15036 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : No active profile set, falling back to default profiles: default
+2022-10-07 00:50:11.319  INFO 15036 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c735fcef-866f-3644-977c-f698a1952416
+2022-10-07 00:50:11.586  INFO 15036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (http)
+2022-10-07 00:50:11.587  INFO 15036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-07 00:50:11.587  INFO 15036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-10-07 00:50:11.645  INFO 15036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-07 00:50:11.645  INFO 15036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1050 ms
+2022-10-07 00:50:12.077  WARN 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-10-07 00:50:12.077  INFO 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-07 00:50:12.079  INFO 15036 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@136df5f
+2022-10-07 00:50:13.030  WARN 15036 --- [restartedMain] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2022-10-07 00:50:13.068  WARN 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-10-07 00:50:13.068  INFO 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-07 00:50:13.406  INFO 15036 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-07 00:50:14.323  INFO 15036 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-10-07 00:50:14.394  INFO 15036 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1e08152a-cc53-4146-a5a1-24e6a240d0fe
+
+2022-10-07 00:50:14.427  INFO 15036 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1431bba, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e9d37, org.springframework.security.web.header.HeaderWriterFilter@8ad076, org.springframework.security.web.authentication.logout.LogoutFilter@1daeeea, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@280330, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e3bff9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@85e00d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@184fcc9, org.springframework.security.web.session.SessionManagementFilter@1895a25, org.springframework.security.web.access.ExceptionTranslationFilter@116329a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a32351]
+2022-10-07 00:50:14.458  WARN 15036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-07 00:50:14.474  WARN 15036 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-10-07 00:50:14.529  INFO 15036 --- [restartedMain] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2022-10-07 00:50:14.533  WARN 15036 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-10-07 00:50:14.538  INFO 15036 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-10-07 00:50:14.581  INFO 15036 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-10-07 00:50:14.583  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-10-07 00:50:14.585  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-10-07 00:50:14.585  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-10-07 00:50:14.585  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-10-07 00:50:14.586  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-10-07 00:50:14.732  INFO 15036 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:50:14.733  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-10-07 00:50:14.733  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-10-07 00:50:14.733  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-10-07 00:50:14.733  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-10-07 00:50:14.733  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-10-07 00:50:14.733  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-10-07 00:50:14.734  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-10-07 00:50:14.736  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-10-07 00:50:14.738  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-10-07 00:50:14.738  INFO 15036 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-10-07 00:50:14.739  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1665121814739 with initial instances count: 4
+2022-10-07 00:50:14.744  INFO 15036 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVIDOR-ZUUL with eureka with status UP
+2022-10-07 00:50:14.744  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1665121814744, current=UP, previous=STARTING]
+2022-10-07 00:50:14.744  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:ac7f6c9aa3106f452801984e50b78131: registering service...
+2022-10-07 00:50:14.749  INFO 15036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (http) with context path ''
+2022-10-07 00:50:14.750  INFO 15036 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8443
+2022-10-07 00:50:14.760  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:ac7f6c9aa3106f452801984e50b78131 - registration status: 204
+2022-10-07 00:50:15.088  INFO 15036 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : Started ServidorZuulApplication in 5.304 seconds (JVM running for 2550.71)
+2022-10-07 00:50:15.092  INFO 15036 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-07 00:51:30.748  INFO 15036 --- [Thread-14] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVIDOR-ZUUL with eureka with status DOWN
+2022-10-07 00:51:30.749  WARN 15036 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1665121890749, current=DOWN, previous=UP]
+2022-10-07 00:51:30.749  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:ac7f6c9aa3106f452801984e50b78131: registering service...
+2022-10-07 00:51:30.763  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:ac7f6c9aa3106f452801984e50b78131 - registration status: 204
+2022-10-07 00:51:31.015  INFO 15036 --- [Thread-14] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2022-10-07 00:51:31.017  INFO 15036 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-07 00:51:31.018  INFO 15036 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-10-07 00:51:34.027  INFO 15036 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-10-07 00:51:34.042  INFO 15036 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:ac7f6c9aa3106f452801984e50b78131 - deregister  status: 200
+2022-10-07 00:51:34.060  INFO 15036 --- [Thread-14] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-10-07 00:51:34.918  INFO 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-10-07 00:51:34.922  INFO 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-10-07 00:51:34.923  WARN 15036 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/servidor-zuul/default": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-10-07 00:51:34.923  INFO 15036 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : No active profile set, falling back to default profiles: default
+2022-10-07 00:51:35.549  INFO 15036 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c735fcef-866f-3644-977c-f698a1952416
+2022-10-07 00:51:35.695  INFO 15036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (http)
+2022-10-07 00:51:35.696  INFO 15036 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-07 00:51:35.696  INFO 15036 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2022-10-07 00:51:35.766  INFO 15036 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-07 00:51:35.766  INFO 15036 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 838 ms
+2022-10-07 00:51:35.820  WARN 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-10-07 00:51:35.820  INFO 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-07 00:51:35.821  INFO 15036 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@f07e5b
+2022-10-07 00:51:36.319  WARN 15036 --- [restartedMain] o.s.s.o.p.t.s.JwtAccessTokenConverter    : Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2022-10-07 00:51:36.337  WARN 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-10-07 00:51:36.337  INFO 15036 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-10-07 00:51:36.432  INFO 15036 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-07 00:51:36.966  INFO 15036 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-10-07 00:51:37.037  INFO 15036 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 11809724-21bc-4d47-845e-8ecee5dd1101
+
+2022-10-07 00:51:37.070  INFO 15036 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12c736e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1184fd5, org.springframework.security.web.header.HeaderWriterFilter@a8755b, org.springframework.security.web.authentication.logout.LogoutFilter@14c09f4, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@66fa66, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1599c46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18ad6fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1457c96, org.springframework.security.web.session.SessionManagementFilter@171ae75, org.springframework.security.web.access.ExceptionTranslationFilter@1d5c432, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13655e]
+2022-10-07 00:51:37.093  WARN 15036 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-07 00:51:37.107  WARN 15036 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-10-07 00:51:37.167  INFO 15036 --- [restartedMain] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2022-10-07 00:51:37.172  WARN 15036 --- [restartedMain] s.o.SpringCloudSecurityAutoConfiguration : All Spring Cloud Security modules and starters are deprecated. They will be moved to individual projects in the next major release.
+2022-10-07 00:51:37.176  INFO 15036 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2022-10-07 00:51:37.220  INFO 15036 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-10-07 00:51:37.222  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-10-07 00:51:37.223  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-10-07 00:51:37.223  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-10-07 00:51:37.223  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-10-07 00:51:37.224  INFO 15036 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-10-07 00:51:37.352  INFO 15036 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:51:37.352  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-10-07 00:51:37.352  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-10-07 00:51:37.353  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-10-07 00:51:37.353  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-10-07 00:51:37.353  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-10-07 00:51:37.353  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-10-07 00:51:37.353  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-10-07 00:51:37.356  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-10-07 00:51:37.357  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-10-07 00:51:37.357  INFO 15036 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-10-07 00:51:37.358  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1665121897358 with initial instances count: 4
+2022-10-07 00:51:37.361  INFO 15036 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVIDOR-ZUUL with eureka with status UP
+2022-10-07 00:51:37.362  INFO 15036 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1665121897362, current=UP, previous=STARTING]
+2022-10-07 00:51:37.362  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:04ebc065eef766294d4784c560f97b18: registering service...
+2022-10-07 00:51:37.367  INFO 15036 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (http) with context path ''
+2022-10-07 00:51:37.368  INFO 15036 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8443
+2022-10-07 00:51:37.378  INFO 15036 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVIDOR-ZUUL/servidor-zuul:04ebc065eef766294d4784c560f97b18 - registration status: 204
+2022-10-07 00:51:37.706  INFO 15036 --- [restartedMain] com.kruger.zuul.ServidorZuulApplication  : Started ServidorZuulApplication in 3.565 seconds (JVM running for 2633.328)
+2022-10-07 00:51:37.713  INFO 15036 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-07 00:56:37.363  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 00:59:20.027  INFO 15036 --- [http-nio-8443-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-07 00:59:20.028  INFO 15036 --- [http-nio-8443-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-07 00:59:20.039  INFO 15036 --- [http-nio-8443-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2022-10-07 01:01:37.377  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 06:31:57.419  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 06:36:57.424  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 06:41:57.425  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 06:46:57.428  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 06:51:57.438  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 06:56:57.454  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 07:01:57.455  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-10-07 07:06:57.472  INFO 15036 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

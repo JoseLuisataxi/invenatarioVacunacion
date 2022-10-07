@@ -1,5 +1,8 @@
 package com.kruger.administrador.controladores;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kruger.administrador.entidades.Empleado;
 import com.kruger.administrador.enumeradores.EstadoRespuestaEnum;
+import com.kruger.administrador.enumeradores.TipoVacunaEnum;
 import com.kruger.administrador.servicios.EmpleadoServicio;
 import com.kruger.administrador.utilitario.EntradaEmpleadoDto;
 import com.kruger.administrador.utilitario.RespuestaTo;
@@ -89,5 +93,40 @@ public class EmpleadoControlador {
 	public <X> ResponseEntity<RespuestaTo<X>> responderError(Exception ex) {
 		return new ResponseEntity<>(new RespuestaTo<>(EstadoRespuestaEnum.ERROR, ex.getMessage(), null),
 				HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	@GetMapping("/buscarPorEstadoVacuna/{estadoVacunacion}")
+	public ResponseEntity<RespuestaTo<Iterable<Empleado>>> buscarPorEstadoVacunacion(boolean estadoVacunacion) {
+		try {
+			return new ResponseEntity<>(new RespuestaTo<>(EstadoRespuestaEnum.OK, null,
+					servicio.buscarPorEstadoVacunacion(estadoVacunacion)), HttpStatus.OK);
+		} catch (Exception ex) {
+			return responderError(ex);
+		}
+	}
+
+	@GetMapping("/buscarPorTipoVacuna/{tipoVacuna}")
+	public ResponseEntity<RespuestaTo<Iterable<Empleado>>> buscarPorTipoVacuna(TipoVacunaEnum tipoVacuna) {
+		try {
+			return new ResponseEntity<>(
+					new RespuestaTo<>(EstadoRespuestaEnum.OK, null, servicio.buscarPorTipoVacuna(tipoVacuna)),
+					HttpStatus.OK);
+		} catch (Exception ex) {
+			return responderError(ex);
+		}
+	}
+
+	@GetMapping("/buscarPorRangoFechaVacunacion/{fechaInicio}/{fechaFin}")
+	public ResponseEntity<RespuestaTo<Iterable<Empleado>>> buscarPorRangoFechaVacunacion(
+			@PathVariable String fechaInicio, @PathVariable String fechaFin) {
+		try {
+			DateTimeFormatter formateador = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			return new ResponseEntity<>(
+					new RespuestaTo<>(EstadoRespuestaEnum.OK, null, servicio.buscarPorRangoFechaVacunacion(
+							LocalDate.parse(fechaInicio, formateador), LocalDate.parse(fechaFin, formateador))),
+					HttpStatus.OK);
+		} catch (Exception ex) {
+			return responderError(ex);
+		}
 	}
 }

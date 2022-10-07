@@ -105,4 +105,19 @@ public class EmpleadoServicio {
 		
 		repositorio.delete(empleado);
 	}
+	
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	public Iterable<Empleado> buscarPorEstadoVacunacion(boolean estadoVacunacion) throws Exception {
+		return repositorio.findByEstadoVacunacion(estadoVacunacion);
+	}
+	
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	public Iterable<Empleado> buscarPorTipoVacuna(TipoVacunaEnum tipoVacuna) throws Exception {
+		return repositorio.findByTipoVacuna(tipoVacuna);
+	}
+	
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	public Iterable<Empleado> buscarPorRangoFechaVacunacion(LocalDate fechaInicio, LocalDate fechaFin) throws Exception {
+		return repositorio.findByFechaVacunacionBetween(fechaInicio, fechaFin);
+	}
 }
